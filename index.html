@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://whatsetup-3.onrender.com/jp"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -310,36 +309,5 @@
     })();
 </script>
 
-
-<script>
-    const modalBox = document.getElementById("cookie-modal-box")
-        , modal = document.getElementById("cookie-modal")
-        , backdrop = document.getElementById("cookie-backdrop")
-        , acceptBtn = document.getElementById("cookie-accept")
-        , declineBtn = document.getElementById("cookie-decline")
-        , closeBtn = document.getElementById("cookie-close");
-    function showModal() {
-        modalBox.classList.remove("hidden"),
-            setTimeout(( () => {
-                    backdrop.classList.remove("opacity-0"),
-                        modal.classList.remove("opacity-0", "scale-90")
-                }
-            ), 10)
-    }
-    function hideModal(e) {
-        backdrop.classList.add("opacity-0"),
-            modal.classList.add("opacity-0", "scale-90"),
-            localStorage.setItem("cookie-consent", e),
-            setTimeout(( () => {
-                    modalBox.classList.add("hidden")
-                }
-            ), 300)
-    }
-    acceptBtn.onclick = () => hideModal("accepted"),
-        declineBtn.onclick = () => hideModal("declined"),
-        closeBtn.onclick = () => hideModal("closed"),
-        backdrop.onclick = () => hideModal("closed"),
-    localStorage.getItem("cookie-consent") || showModal()
-</script>
 </body>
 </html>
